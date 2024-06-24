@@ -3,6 +3,7 @@ import { createContext, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar.jsx';
 import Cv from './components/Cv.jsx'
+import Footer from './components/Footer.jsx';
  const Them=createContext({
   fullName:"anis",
   email:"proute",
@@ -44,7 +45,7 @@ const [pro,setpro]=useState([{
 
   return (
     <>
-    <div className=' max-w-full bg-black h-full w-full px-4  flex flex-col  justify-center items-center overflow-x-hidden'>   
+    <div className=' max-w-full bg-custom-gradient min-h-svh w-full px-4  flex flex-col  justify-start items-center overflow-x-hidden'>   
    
 <Them.Provider value={{them,setthem}}>
   <ContextEducation.Provider value={{education,seteducation}}>
@@ -54,6 +55,7 @@ const [pro,setpro]=useState([{
     </ContextPro.Provider>
   </ContextEducation.Provider>
 </Them.Provider>
+<Footer/>
     
        </div>
 

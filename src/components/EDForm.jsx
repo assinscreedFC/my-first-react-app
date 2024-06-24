@@ -35,7 +35,7 @@ return(
     <div className= {` w-screen bg-transparent flex flex-col items-center ${on ? "hidden" : null } `}>
         
         <form action="" onSubmit={handleSubmit} className="flex flex-col justify-center fixed z-10 w-4/5 px-2 bg-slate-900 gap-3 rounded-md py-3 text-slate-200 items-center">
-        <h1 className="text-3xl font-bold mb-4 ">Pofile</h1>
+        <h1 className="text-3xl font-bold mb-4 ">Education</h1>
         <div className="flex flex-col gap-1 w-full px-4">
             <label htmlFor="nameS">Name of school:</label>
             <input className=" text-slate-700 ring-slate-50  outline-none ring-offset-2 ring-2 focus:ring-slate-500 rounded-sm" type="text" id="nameS" name="nameS" placeholder="Abderahamn mira"/></div>
