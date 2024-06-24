@@ -47,9 +47,32 @@ function Cv({val}) {
             <BarCv />
             <CorpCv/>
         </div>
-        <div className="w-full flex items-center justify-center m-3">
-            <button className=" bg-slate-50 text-slate-950 " onClick={handleDownloadPdf}>download</button>
-        </div>
+        <div className="w-fit flex items-center justify-center m-3 group">
+  <button
+    className="
+      w-fit
+      bg-slate-50
+      text-slate-950
+      p-2
+      rounded-md
+      ring-2
+      ring-pink-300
+      focus:ring-2
+      focus:ring-offset-2
+      focus:ring-offset-slate-50
+      focus:ring-pink-500
+      border-none
+      hover:bg-slate-100
+      focus:outline-none
+      transition
+      duration-200
+      ease-in-out
+    "
+    onClick={handleDownloadPdf}
+  >
+    Download
+  </button>
+</div>
 </div>
        
     </>);

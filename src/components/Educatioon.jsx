@@ -14,7 +14,7 @@ function Education(params) {
         {education.map((e, index) => (
           <div key={index} className="flex px-3  gap-2 w-full text-slate-800   justify-between text-xs text">
             <div className="items-start flex flex-col gap-1 w-fit">
-              <p>{e.Start} - {e.End}</p>
+              <p>{e.Start && e.End ? `${e.Start} - ${e.End}` : null}</p>
               <p>{e.adresse}</p>
             </div>
             <div className="flex flex-col text items-start text-wrap gap-1 w-7/12">

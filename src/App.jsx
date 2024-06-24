@@ -27,19 +27,19 @@ const ContextPro=createContext([{
 function App() {
   const [them,setthem]=useState(Them);
   const [education,seteducation]=useState([{
-    nameS:"anis",
-    Degree:"anis",
-    Start:"anis",
-    End:"anis",
-    adresse:"anis"
+    nameS:null,
+    Degree:null,
+    Start:null,
+    End:null,
+    adresse:null
 }]);
 const [pro,setpro]=useState([{
-  nameS:"anis",
-  Position:"anis",
-  Degree:"anis",
-  Start:"anis",
-  End:"anis",
-  adresse:"anis"
+  nameS:null,
+  Position:null,
+  Degree:null,
+  Start:null,
+  End:null,
+  adresse:null
 }])
 
   return (
