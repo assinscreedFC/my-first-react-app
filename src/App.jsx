@@ -15,6 +15,14 @@ const ContextEducation=createContext([{
   Start:"anis",
   End:"anis",
   adresse:"anis"
+}]);
+const ContextPro=createContext([{
+  nameS:"anis",
+  Position:"anis",
+  Degree:"anis",
+  Start:"anis",
+  End:"anis",
+  adresse:"anis"
 }])
 function App() {
   const [them,setthem]=useState(Them);
@@ -25,16 +33,25 @@ function App() {
     End:"anis",
     adresse:"anis"
 }]);
+const [pro,setpro]=useState([{
+  nameS:"anis",
+  Position:"anis",
+  Degree:"anis",
+  Start:"anis",
+  End:"anis",
+  adresse:"anis"
+}])
 
   return (
     <>
-    <div className=' max-w-full bg-black h-full w-full px-4  flex flex-col  justify-center items-center overflow-hidden min-h-svh'>   
+    <div className=' max-w-full bg-black h-full w-full px-4  flex flex-col  justify-center items-center overflow-x-hidden'>   
    
 <Them.Provider value={{them,setthem}}>
   <ContextEducation.Provider value={{education,seteducation}}>
-
+    <ContextPro.Provider value={{pro,setpro}}>
       <Navbar/>
        <Cv  />
+    </ContextPro.Provider>
   </ContextEducation.Provider>
 </Them.Provider>
     
@@ -44,4 +61,4 @@ function App() {
   )
 }
 
-export {App,Them,ContextEducation}
+export {App,Them,ContextEducation,ContextPro}
