@@ -67,9 +67,9 @@ function Navbar(params) {
               Experience
             </a>
           </div>
-        </div>{on && <Form />}{education && <EDForm />}{prof && <PEForm />}
+        </div>{on && <Form />}{education && <EDForm />}
       </div>
-
+{prof && <PEForm />}
       
       
       

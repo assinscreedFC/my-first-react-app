@@ -19,7 +19,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="text-gray-800 hover:text-gray-600"
         >
-          <img src="./github.svg" alt="github"  className=' w-5 text-3xl transition-transform duration-300 transform hover:rotate-360 hover:scale-125'/>
+          <img src="./github.svg" alt="github"  className=' w-5 text-3xl transition-transform duration-300 transform hover:rotate-360 hover:scale-125 hover:animate-rotate-scale-up'/>
         </a>
       </div>
     </footer>

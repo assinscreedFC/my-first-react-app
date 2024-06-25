@@ -4,12 +4,12 @@ import './App.css'
 import Navbar from './components/Navbar.jsx';
 import Cv from './components/Cv.jsx'
 import Footer from './components/Footer.jsx';
- const Them=createContext({
+ const Them=createContext([{
   fullName:"anis",
   email:"proute",
   phone:"000",
   adresse:"tunis"
-});
+}]);
 const ContextEducation=createContext([{
   nameS:"anis",
   Degree:"anis",
@@ -26,22 +26,14 @@ const ContextPro=createContext([{
   adresse:"anis"
 }])
 function App() {
-  const [them,setthem]=useState(Them);
-  const [education,seteducation]=useState([{
-    nameS:null,
-    Degree:null,
-    Start:null,
-    End:null,
-    adresse:null
-}]);
-const [pro,setpro]=useState([{
-  nameS:null,
-  Position:null,
-  Degree:null,
-  Start:null,
-  End:null,
-  adresse:null
-}])
+  const [them,setthem]=useState([{
+    fullName:"anis",
+    email:"proute",
+    phone:"000",
+    adresse:"tunis"
+  }]);
+  const [education,seteducation]=useState([]);
+const [pro,setpro]=useState([])
 
   return (
     <>
