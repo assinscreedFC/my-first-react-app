@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import useLocalStorage from './components/LocalStorageHook.js';
 
 import './App.css'
 import Navbar from './components/Navbar.jsx';
@@ -26,14 +27,11 @@ const ContextPro=createContext([{
   adresse:"anis"
 }])
 function App() {
-  const [them,setthem]=useState([{
-    fullName:"anis",
-    email:"proute",
-    phone:"000",
-    adresse:"tunis"
-  }]);
-  const [education,seteducation]=useState([]);
-const [pro,setpro]=useState([])
+  const { getStoredValue, setStoredValue, removeStoredValue } = useLocalStorage();
+
+  const [them,setthem]=useState(getStoredValue(1));
+  const [education,seteducation]=useState(getStoredValue(2));
+const [pro,setpro]=useState(getStoredValue(3));
 
   return (
     <>

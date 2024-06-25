@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { ContextEducation } from "../App.jsx";
-
+import useLocalStorage from "./LocalStorageHook.js";
 function EDForm(params) {
+  const { getStoredValue, setStoredValue, removeStoredValue } = useLocalStorage();
+
     const [on, setOn] = useState(false);
     const { education, seteducation } = useContext(ContextEducation);
     const [formVisible, setFormVisible] = useState(false);
@@ -31,12 +33,14 @@ function EDForm(params) {
           if (editIndex !== null) {
           const updatedEducation = [...educationArray];
           updatedEducation[editIndex] = newEducation;
+          setStoredValue(2,updatedEducation);
           seteducation(updatedEducation);
-        } else {
-          seteducation([...educationArray, newEducation]);
+        } else { const lol= [...educationArray, newEducation]
+          setStoredValue(2,lol);
+          seteducation(lol);
         }
         }
-        
+      
 
         toggleForm();
         setOn(true);

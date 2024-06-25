@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { ContextPro } from "../App.jsx";
+import useLocalStorage from "./LocalStorageHook.js";
 
 function PEForm() {
+  const {setStoredValue}=useLocalStorage();
   const [on, setOn] = useState(false);
   const { pro, setpro } = useContext(ContextPro);
   const [formVisible, setFormVisible] = useState(false);
@@ -27,20 +29,23 @@ function PEForm() {
       End,
       adresse
     };
-    let str =newEducation.nameS;
+    let str =newPro.nameS;
     str=  str.replace(/\s+/g, '');
     if(str!==""){
        if (editIndex !== null) {
       const updatedPro = [...proArray];
       updatedPro[editIndex] = newPro;
+      setStoredValue(3,updatedPro);
       setpro(updatedPro);
     } else {
-      setpro([...proArray, newPro]);
+      const lol=[...proArray, newPro];
+      setStoredValue(3,lol);
+      setpro(lol);
     }
     }
 
    
-
+    
     toggleForm();
     setOn(true);
   };
