@@ -35,7 +35,7 @@ const [pro,setpro]=useState(getStoredValue(3));
 
   return (
     <>
-    <div className=' max-w-full bg-custom-gradient min-h-svh w-full px-4  flex flex-col  justify-start items-center overflow-x-hidden'>   
+    <div id="rot" className='  max-w-full bg-custom-gradient min-h-svh w-full px-4  flex flex-col  justify-start items-center overflow-x-hidden'>   
    
 <Them.Provider value={{them,setthem}}>
   <ContextEducation.Provider value={{education,seteducation}}>

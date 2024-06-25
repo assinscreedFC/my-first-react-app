@@ -19,4 +19,33 @@
   .rotate-scale-up {
     animation: rotate-scale-up 0.65s linear both;
   }
+
+  
+#rot {
+    --sb-track-color: #fdfdfd;
+    --sb-thumb-color: #181918;
+    --sb-size: 11px;
+  }
+  
+  #rot::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  #rot::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+  
+  #rot::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    #rot {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
   
